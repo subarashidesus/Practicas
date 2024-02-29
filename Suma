@@ -1,1 +1,22 @@
+import java.util.Scanner;
 
+public class SumaDigitos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingresa un número entero positivo: ");
+        int numero = scanner.nextInt();
+        
+        int sumaDigitos = 0;
+        int numeroOriginal = numero;
+        
+        while (numero > 0) {
+            int digito = numero % 10;
+            sumaDigitos += digito;
+            numero /= 10;
+        }
+        
+        System.out.println("La suma de los dígitos de " + numeroOriginal + " es: " + sumaDigitos);
+        
+        scanner.close();
+    }
+}
